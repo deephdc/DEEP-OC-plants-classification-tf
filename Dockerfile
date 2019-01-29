@@ -1,7 +1,7 @@
 FROM tensorflow/tensorflow:1.12.0-py3
 LABEL maintainer="Lara Lloret Iglesias <lloret@ifca.unican.es>"
 LABEL version="0.1"
-LABEL description="DEEP as a Service Container: Seeds Classification"
+LABEL description="DEEP as a Service Container: Plants Classification"
 
 RUN apt-get update && \
     apt-get upgrade -y
