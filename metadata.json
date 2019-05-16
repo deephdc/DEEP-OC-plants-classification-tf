@@ -2,7 +2,6 @@
     "title": "DEEP OC Plant Classification",
     "summary": "A trained Xception net on Tensorflow/Keras to classify plants.",
     "description": [
-		"Demo try",
         "The deep learning revolution has brought significant advances in a number of fields [1], primarily linked to",
         "image and speech recognition. The standardization of image classification tasks like the [ImageNet Large Scale",
         "Visual Recognition Challenge](http://www.image-net.org/challenges/LSVRC/) [2] has resulted in a reliable way to",
@@ -30,12 +29,14 @@
         "[2]: Olga Russakovsky et al. [ImageNet Large Scale Visual Recognition Challenge](https://arxiv.org/abs/1409.0575). International Journal of Computer Vision (IJCV), 115(3):211–252, 2015.\n",
         "[3]: Sue Han Lee, Chee Seng Chan, Paul Wilkin, and Paolo Remagnino. [Deep-plant: Plant identification with convolutional neural networks](https://arxiv.org/abs/1506.08425), 2015.\n",
         "[4]: Mads Dyrmann, Henrik Karstoft, and Henrik Skov Midtiby. [Plant species classification using deep convolutional neural network.](https://www.sciencedirect.com/science/article/pii/S1537511016301465) Biosystems Engineering, 151:72–80, 2016.\n",
-        "[5]: Chollet, François. [Xception: Deep learning with depthwise separable convolutions](https://arxiv.org/abs/1610.02357) arXiv preprint (2017): 1610-02357.\n\n[6]: Heredia, Ignacio. [Large-scale plant classification with deep neural networks.](https://arxiv.org/abs/1706.03736) Proceedings of the Computing Frontiers Conference. ACM, 2017."
+        "[5]: Chollet, Francois. [Xception: Deep learning with depthwise separable convolutions](https://arxiv.org/abs/1610.02357) arXiv preprint (2017): 1610-02357.\n",
+        "[6]: Heredia, Ignacio. [Large-scale plant classification with deep neural networks.](https://arxiv.org/abs/1706.03736) Proceedings of the Computing Frontiers Conference. ACM, 2017."
 	],
     "keywords": [
         "services", "library/tensorflow", "library/keras", "docker"
     ],
     "license": "Apache 2.0",
+    "cite_url": "https://doi.org/10.1145/3075564.3075590",
     "date_creation": "2019-01-01",
     "sources": {
 		"dockerfile_repo": "https://github.com/deephdc/DEEP-OC-plants-classification-tf",
