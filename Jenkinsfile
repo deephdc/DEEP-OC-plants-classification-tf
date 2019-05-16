@@ -12,7 +12,7 @@ pipeline {
         tf_ver = "1.12.0"
         py_ver = "py3"
     }
-/*
+
     stages {
         stage('Docker image building') {
             when {
@@ -98,7 +98,7 @@ pipeline {
                 }
             }
         }
-*/
+
         stage("Render metadata on the marketplace") {
             when {
                 branch 'master'
