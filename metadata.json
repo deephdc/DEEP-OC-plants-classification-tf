@@ -18,7 +18,7 @@
         "Creative-Common AttributionShareAlike 2.0 license. It consists of around 250K images belonging to more than 6K",
         "plant species of Western Europe. These species are distributed in 1500 genera and 200 families.",
 
-        "<img class='fit', src='https://github.com/deephdc/DEEP-OC-plants-classification-tf/images/plants.png'/>\n",
+        "<img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-plants-classification-tf/master/images/plants.png'/>\n",
 
         "A detailed article about this network and the results obtained with it can be found in [6].\n",
 
