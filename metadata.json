@@ -12,15 +12,14 @@
         "monitoring purposes.\n",
 
         "This Docker container contains a trained Convolutional Neural network optimized for plant identification using",
-        "images. The architecture used is an Xception [5] network using Keras on top of Tensorflow.\n",
+        "images. The architecture used is an Xception [5] network using Keras on top of Tensorflow. A detailed article",
+        "about this network and the results obtained with it can be found in [6].\n",
 
         "As training dataset it has been used the great collection of images which are available in PlantNet under a ",
         "Creative-Common AttributionShareAlike 2.0 license. It consists of around 250K images belonging to more than 6K",
-        "plant species of Western Europe. These species are distributed in 1500 genera and 200 families.",
+        "plant species of Western Europe. These species are distributed in 1500 genera and 200 families.\n",
 
         "<img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-plants-classification-tf/master/images/plants.png'/>\n",
-
-        "A detailed article about this network and the results obtained with it can be found in [6].\n",
 
         "This service is based in the [Image Classification with Tensorflow](./deep-oc-image-classification-tensorflow.html) model.\n",
 
