@@ -1,5 +1,5 @@
 {
-    "title": "DEEP OC Plant Classification",
+    "title": "DEEP OC Plants Classification",
     "summary": "A trained Xception net on Tensorflow/Keras to classify plants.",
     "description": [
         "The deep learning revolution has brought significant advances in a number of fields [1], primarily linked to",
@@ -40,7 +40,7 @@
     "sources": {
 		"dockerfile_repo": "https://github.com/deephdc/DEEP-OC-plants-classification-tf",
 		"docker_registry_repo": "deephdc/deep-oc-plants-classification-tf",
-		"code": "https://github.com/deephdc/plants-classification-tf",
+		"code": "https://github.com/deephdc/image-classification-tf",
         "pre_trained_weights": "https://cephrgw01.ifca.es:8080/swift/v1/plants-tf/"
 	},
     "continuous_integration": {
