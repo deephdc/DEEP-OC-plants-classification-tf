@@ -64,9 +64,24 @@ RUN apt-get install -y wget nano && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /root/.cache/pip/* && \
     rm -rf /tmp/*
+ 
+RUN pip install --no-cache-dir \
+    jupyterlab && \
+    rm -rf /root/.cache/pip/* && \
+    rm -rf /tmp/*
+
+
+ENV JUPYTER_CONFIG_DIR /srv/.jupyter/
+COPY jupyter/jupyter_notebook_config.py /srv/.jupyter/
+COPY jupyter/run_jupyter.sh /
+# Necessary for the Jupyter Lab terminal
+ENV SHELL /bin/bash
+
+# Open Jupyter port
+# REMINDER: Tensorflow Docker Images used to EXPOSE ports 6006 and 8888
+EXPOSE 6006 8888
 
 # Expose API on port 5000
 EXPOSE 5000
 
 CMD ["deepaas-run", "--openwhisk-detect", "--listen-ip", "0.0.0.0", "--listen-port", "5000"]
-
