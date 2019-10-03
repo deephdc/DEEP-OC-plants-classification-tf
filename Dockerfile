@@ -72,8 +72,8 @@ RUN pip install --no-cache-dir \
 
 
 ENV JUPYTER_CONFIG_DIR /srv/.jupyter/
-COPY jupyter/jupyter_notebook_config.py /srv/.jupyter/
-COPY jupyter/run_jupyter.sh /
+#COPY jupyter/jupyter_notebook_config.py /srv/.jupyter/
+#COPY jupyter/run_jupyter.sh /
 # Necessary for the Jupyter Lab terminal
 ENV SHELL /bin/bash
 
