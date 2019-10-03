@@ -70,7 +70,6 @@ RUN pip install --no-cache-dir \
     rm -rf /root/.cache/pip/* && \
     rm -rf /tmp/*
 
-
 ENV JUPYTER_CONFIG_DIR /srv/.jupyter/
 COPY jupyter/jupyter_notebook_config.py /srv/.jupyter/
 COPY jupyter/run_jupyter.sh /
