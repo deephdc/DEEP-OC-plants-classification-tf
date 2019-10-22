@@ -91,8 +91,14 @@ RUN git clone -b $branch https://github.com/deephdc/image-classification-tf && \
     cd ..
 
 # Download network weights
-ENV SWIFT_CONTAINER https://cephrgw01.ifca.es:8080/swift/v1/plants-tf/
-ENV MODEL_TAR plants.tar.xz
+
+## Trained on Plantnet
+#ENV SWIFT_CONTAINER https://cephrgw01.ifca.es:8080/swift/v1/plants-tf/
+#ENV MODEL_TAR plants.tar.xz
+
+# Trained on iNaturalist
+ENV SWIFT_CONTAINER https://cephrgw01.ifca.es:8080/swift/v1/inaturalist_plants-tf/
+ENV MODEL_TAR inaturalist_plants.tar.xz
 
 RUN curl -o ./image-classification-tf/models/${MODEL_TAR} \
     ${SWIFT_CONTAINER}${MODEL_TAR}
