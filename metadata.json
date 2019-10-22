@@ -22,7 +22,7 @@
         "Creative-Common AttributionShareAlike 2.0 license. It consists of around 250K images belonging to more than 6K",
         "plant species of Western Europe. These species are distributed in 1500 genera and 200 families.\n",
 
-        "A new iteration of the application has been trained using plant images from (iNaturalist)[https://www.inaturalist.org/].",
+        "A new iteration of the application has been trained using plant images from [iNaturalist](https://www.inaturalist.org/).",
         "This dataset has around 4.4M observations with 7M images from 58K worldwide species.",
         "We have restricted our training to the 10K most popular species.\n",
 
