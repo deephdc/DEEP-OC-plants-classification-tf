@@ -116,6 +116,7 @@ RUN pip install --no-cache-dir jupyterlab && \
 ENV JUPYTER_CONFIG_DIR /srv/.jupyter/
 COPY jupyter/jupyter_notebook_config.py /srv/.jupyter/
 COPY jupyter/run_jupyter.sh /srv/.jupyter/
+RUN chmod a+x /srv/.jupyter/run_jupyter.sh
 ENV SHELL /bin/bash
 
 # Open DEEPaaS port
