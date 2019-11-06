@@ -22,6 +22,9 @@ ARG pyVer=python3
 # What user branch to clone (!)
 ARG branch=master
 
+# If to install JupyterLab
+ARG jlab=true
+
 # Install ubuntu updates and python related stuff
 # link python3 to python, pip3 to pip, if needed
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
@@ -83,6 +86,21 @@ RUN pip install --no-cache-dir entry_point_inspector && \
     rm -rf /root/.cache/pip/* && \
     rm -rf /tmp/*
 
+# Install DEEP debug_log scripts:
+RUN git clone https://github.com/deephdc/deep-debug_log /srv/.debug_log
+
+# Install JupyterLab
+ENV JUPYTER_CONFIG_DIR /srv/.jupyter/
+# Necessary for the Jupyter Lab terminal
+ENV SHELL /bin/bash
+RUN if [ "$jlab" = true ]; then \
+       apt update && \
+       apt install -y nodejs npm && \
+       apt-get clean && \
+       pip install --no-cache-dir jupyterlab ; \
+       git clone https://github.com/deephdc/deep-jupyter /srv/.jupyter ; \
+    else echo "[INFO] Skip JupyterLab installation!"; fi
+
 # Install user app:
 RUN git clone -b $branch https://github.com/deephdc/image-classification-tf && \
     cd image-classification-tf && \
@@ -107,17 +125,17 @@ RUN curl -o ./image-classification-tf/models/${MODEL_TAR} \
 RUN cd image-classification-tf/models && \
         tar -xf ${MODEL_TAR}
 
-# Install JupyterLab
-RUN pip install --no-cache-dir jupyterlab && \
-    rm -rf /root/.cache/pip/* && \
-    rm -rf /tmp/*
-
-# Configure JupyterLab and use /bin/bash for JupyterLab terminal
-ENV JUPYTER_CONFIG_DIR /srv/.jupyter/
-COPY jupyter/jupyter_notebook_config.py /srv/.jupyter/
-COPY jupyter/run_jupyter.sh /srv/.jupyter/
-RUN chmod a+x /srv/.jupyter/run_jupyter.sh
-ENV SHELL /bin/bash
+## Install JupyterLab
+#RUN pip install --no-cache-dir jupyterlab && \
+#    rm -rf /root/.cache/pip/* && \
+#    rm -rf /tmp/*
+#
+## Configure JupyterLab and use /bin/bash for JupyterLab terminal
+#ENV JUPYTER_CONFIG_DIR /srv/.jupyter/
+#COPY jupyter/jupyter_notebook_config.py /srv/.jupyter/
+#COPY jupyter/run_jupyter.sh /srv/.jupyter/
+#RUN chmod a+x /srv/.jupyter/run_jupyter.sh
+#ENV SHELL /bin/bash
 
 # Open DEEPaaS port
 EXPOSE 5000
