@@ -42,15 +42,14 @@
         "services", "library/tensorflow", "library/keras", "docker", "deep learning", "trainable"
     ],
     "license": "Apache 2.0",
-    "cite_url": "https://doi.org/10.1145/3075564.3075590",
+    "training_files_url": "https://cephrgw01.ifca.es:8080/swift/v1/plants-tf/",
+    "dataset_url": "https://www.gbif.org/es/dataset/50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+    "cite_url": "http://digital.csic.es/handle/10261/194545",
     "date_creation": "2019-01-01",
     "sources": {
 		"dockerfile_repo": "https://github.com/deephdc/DEEP-OC-plants-classification-tf",
 		"docker_registry_repo": "deephdc/deep-oc-plants-classification-tf",
-		"code": "https://github.com/deephdc/image-classification-tf",
-        "training_files_url": "https://cephrgw01.ifca.es:8080/swift/v1/plants-tf/",
-        "dataset_url": "https://www.gbif.org/es/dataset/50c9509d-22c7-4a22-a47d-8c48425ef4a7",
-        "cite_url": "http://digital.csic.es/handle/10261/194545"
+		"code": "https://github.com/deephdc/image-classification-tf"
 	},
     "continuous_integration": {
         "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-plants-classification-tf/master",
