@@ -1,6 +1,6 @@
 {
     "title": "Plants species classifier",
-    "summary": "Classify plant images among 10K species from the iNaturalist dataset",
+    "summary": "Classify plant images among 10K species from the iNaturalist dataset.",
     "description": [
         "The deep learning revolution has brought significant advances in a number of fields [1], primarily linked to",
         "image and speech recognition. The standardization of image classification tasks like the [ImageNet Large Scale",
@@ -39,7 +39,7 @@
         "[6]: Heredia, Ignacio. [Large-scale plant classification with deep neural networks.](https://arxiv.org/abs/1706.03736) Proceedings of the Computing Frontiers Conference. ACM, 2017."
 	],
     "keywords": [
-        "library/tensorflow", "library/keras", "docker", "deep learning", "trainable", "inference", "pre-trained", "api-v1"
+        "tensorflow", "docker", "deep learning", "trainable", "inference", "pre-trained", "image classification",  "api-v1"
     ],
     "license": "Apache 2.0",
     "training_files_url": "https://cephrgw01.ifca.es:8080/swift/v1/plants-tf/",
