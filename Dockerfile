@@ -17,7 +17,7 @@ ENV CONTAINER_DESCRIPTION "DEEP as a Service Container: Plants Classification"
 #ENV MODEL_TAR plants.tar.xz
 
 # Download network weights (trained on iNaturalist)
-ENV SWIFT_CONTAINER https://cephrgw01.ifca.es:8080/swift/v1/inaturalist_plants-tf/
+ENV SWIFT_CONTAINER https://api.cloud.ifca.es:8080/swift/v1/inaturalist_plants-tf/
 ENV MODEL_TAR inaturalist_plants.tar.xz
 
 RUN rm -rf image-classification-tf/models/*
